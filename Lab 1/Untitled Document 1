@@ -1,0 +1,6 @@
+Compute the real roots of the quadratic equation x^2+x+1=0
+Consider the vector 1:k where k is  apositive integer. WAP that determines how many elements in the vector are exactly divisible by any given number.
+WAP to display the count of occurance of word from a file. 
+WAP ot determine if 2 sets a and b represented as integer vectors are disjoint. If they are, display elements of set A otherwise display elements of set B.
+Wap to scan through an integer vector to determine the index of maximum value. Implement this with and without the inbuilt function.
+Wap to find the sum of odd numbers between any two numbers with and without inbuilt functions
