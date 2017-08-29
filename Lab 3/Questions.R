@@ -42,4 +42,28 @@ for(i in 1:(rows)){
   }
 }
 wineDataSet <- as.data.frame(read.csv("//home//student1//140911090//Lab 3/Wine_data.csv"))
-wineDataSet
+columns <- ncol(wineDataSet)
+columns <- columns -1
+max <- 0
+max_correlation_column <- ""
+for(i in 1:columns){
+  correlation_value <- cor(wineDataSet[,i], wineDataSet[,12])
+  if(correlation_value > max){
+      max <- correlation_value
+      max_correlation_column <- colnames(wineDataSet)[i]
+  }
+}
+print(paste(max_correlation_column, "has the most amount of correlation"))
+count <- 0
+for(i in 1:nrow(wineDataSet)){
+  if(wineDataSet$quality[i] == 8){
+    count <- (count + 1)
+  }
+}
+print(paste("Number of observations are:", count))
+for(i in 1:nrow(wineDataSet)){
+  wineDataSet$residual.sugar <- round(x = wineDataSet$residual.sugar)
+}
+unique_sugar <- unique(wineDataSet$residual.sugar)
+unique_sugar
+print(apply(as.data.frame(wineDataSet$pH), MARGIN = 2, FUN = mean))
