@@ -67,3 +67,8 @@ for(i in 1:nrow(wineDataSet)){
 unique_sugar <- unique(wineDataSet$residual.sugar)
 unique_sugar
 print(apply(as.data.frame(wineDataSet$pH), MARGIN = 2, FUN = mean))
+
+#TV dataset
+tv_dataset <- as.data.frame(read.csv(file="//home//student1//140911090//Lab 3//tvsales.csv"))
+tv_dataset
+
